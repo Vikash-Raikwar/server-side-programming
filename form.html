@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Registration Form-:</h2>
+        <select id="title" name="title" >
+          <option value="">Select Title</option>
+          <option value="Mr">Mr.</option>
+          <option value="Mrs">Mrs.</option>
+          <option value="Other">Other</option>
+      </select>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+            
+            <label for="address1">Mail Address 1:</label>
+            <input type="text" id="address1" name="address1" placeholder="Enter your primary address" required>
+            
+            <label for="address2">Mail Address 2:</label>
+            <input type="text" id="address2" name="address2" placeholder="Enter your secondary address">
+            
+            <label for="city">City:</label>
+             <select name="City"  required>
+
+              <option value="indore">Indore</option>
+              <option value="bhopal">Bhopal</option>
+              <option value="Jabalpur">Jabalpur</option>
+              <option value="home">Narsinghpur</option>
+              <option value="home2">Sagar</option>
+              <option value="Gwalior">Gwalior</option>
+              <option value="home3">Chhatarpur</option>
+             </select>
+             
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+            
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+            
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="+91" required>
+            
+            <label for="language">Language Known:</label>
+            <select id="language" name="language" required>
+                <option value="">Select languages</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Hindi">Hindi</option>
+                <option value="English">English</option>
+                <option value="Marathi">Marathi</option>
+            </select>
+            
+            <label for="info">Additional Information:</label>
+            <textarea id="info" name="additional_info" rows="4" placeholder="Enter additional information"></textarea>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
