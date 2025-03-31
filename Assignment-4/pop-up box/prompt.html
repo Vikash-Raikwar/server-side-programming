@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Box Example</title>
+</head>
+<body>
+    <button onclick="askUserInput()">Enter Text</button>
+    <p id="output"></p>
+
+    <script>
+        function askUserInput() {
+            let userInput = prompt("Please enter some text:");
+            if (userInput !== null && userInput.trim() !== "") {
+                document.getElementById("output").textContent = "You entered: " + userInput;
+            } else {
+                document.getElementById("output").textContent = "No input provided.";
+            }
+        }
+    </script>
+</body>
+</html>

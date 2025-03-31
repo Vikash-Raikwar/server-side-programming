@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content on Click</title>
+    <style>
+        #content {
+            font-size: 20px;
+            color: black;
+            padding: 20px;
+        }
+        .new-style {
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">Original Text</div>
+     
+    <br>
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        function changeContent() {
+            let content = document.getElementById("content");
+            let image = document.getElementById("image");
+            
+            content.textContent = "Text has been changed!";
+            content.classList.toggle("new-style");
+             
+        }
+    </script>
+</body>
+</html>

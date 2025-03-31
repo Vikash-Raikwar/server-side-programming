@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jakarta Servlet Test</title>
+</head>
+<body>
+<h1>Welcome to Jakarta Servlet Example!</h1>
+
+<!-- GET Request Form -->
+<h2>Send GET Request</h2>
+<form action="WelcomeServlet" method="get">
+    <label>Enter your name:</label><br>
+    <input type="text" name="name" required><br><br>
+    <input type="submit" value="Submit via GET">
+</form>
+
+<!-- POST Request Form -->
+<h2>Send POST Request</h2>
+<form action="FormHandlerServlet" method="post">
+    <label>Enter your email:</label><br>
+    <input type="email" name="email" required><br><br>
+    <input type="submit" value="Submit via POST">
+</form>
+
+<!-- Client Info Request -->
+<h2>Get Client Info</h2>
+<form action="ClientInfoServlet" method="get">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+    <label>Age:</label><br>
+    <input type="number" name="age" required><br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

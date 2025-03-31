@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <style>
+        #list-container {
+            margin-top: 20px;
+        }
+        li {
+            margin: 5px;
+            padding: 5px;
+            background-color: lightgray;
+            list-style: none;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamic List</h2>
+    
+    <!-- Input for adding new items -->
+    <input type="text" id="itemInput" placeholder="Enter new item" />
+    <button onclick="addItem()">Add Item</button>
+
+    <!-- List container -->
+    <ul id="list-container">
+        <!-- List items will appear here -->
+    </ul>
+
+    <script>
+        function addItem() {
+            const input = document.getElementById("itemInput");
+            const newItem = input.value.trim();
+            
+            if (newItem !== "") {
+                const ul = document.getElementById("list-container");
+                const li = document.createElement("li");
+                li.textContent = newItem;
+
+                // Add a remove button inside the list item
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Remove";
+                removeBtn.onclick = function() {
+                    ul.removeChild(li);
+                };
+
+                li.appendChild(removeBtn);
+                ul.appendChild(li);
+                
+                // Clear the input field
+                input.value = "";
+            } else {
+                alert("Please enter a valid item.");
+            }
+        }
+    </script>
+</body>
+</html>
